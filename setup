@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# 0. Xcode
-xcode-select --install
-
-
 # 1. Homebrew - (http://brew.sh/)
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
