@@ -1,5 +1,6 @@
 #!/bin/bash
 
-git clone https://source.datanerd.us/vince/brewery.git /tmp/nr-brewwery
-cd /tmp/nr-brewwery
+mkdir -p /tmp/newrelic/brewwery
+cd /tmp/newrelic/brewwery
+curl -fsSL https://github.com/binaryseed/brewery/tarball/master | tar xz -m --strip 1
 ./setup
