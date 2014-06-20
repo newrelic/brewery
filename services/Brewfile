@@ -1,0 +1,4 @@
+
+cask install virtualbox
+install docker
+install boot2docker

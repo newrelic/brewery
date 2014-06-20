@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Custom ruby 2.1.1 version
+curl https://source.datanerd.us/gist/didip/10/raw/install-custom-ruby-build.rb | sh
+mkdir -p ~/.rbenv/versions/2.1.1-yaml-016/lib
+rbenv install 2.1.1-yaml-016
+rbenv use 2.1.1-yaml-016
+gem install bundler
+
+# Next ruby version
+rbenv install 2.1.2
+rbenv use 2.1.2
+gem install bundler
+
+# Setup postgresql db
+createdb $USER

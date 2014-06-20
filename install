@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# 0. Xcode
+xcode-select --install
+
+
+# 1. Homebrew - (http://brew.sh/)
+ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+
+
+# 2. Common software
+
+brew bundle common/Brewfile
+./common/setup
+
+
+# 3. Team specific software
+
+brew bundle apm/Brewfile
+./apm/setup
+
+brew bundle services/Brewfile
+./services/setup
+
+brew bundle data-services/Brewfile
+./data-services/setup
+
+brew bundle agent/Brewfile
+./agent/setup
