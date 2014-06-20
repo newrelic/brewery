@@ -1,4 +1,3 @@
-
 install memcached
 install mysql55
 install elasticsearch

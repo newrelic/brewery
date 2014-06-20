@@ -1,6 +1,5 @@
 #!/bin/bash
 
-mkdir -p /tmp/newrelic/brewery
-cd /tmp/newrelic/brewery
+cd `mktemp -d /tmp/nr-brewery-XX`
 curl -fsSL https://github.com/binaryseed/brewery/tarball/master | tar xz -m --strip 1
-./setup
+./brewery

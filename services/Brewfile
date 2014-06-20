@@ -1,4 +1,3 @@
-
 cask install virtualbox
-install docker
+install thrift
 install boot2docker
