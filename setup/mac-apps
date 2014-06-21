@@ -1,0 +1,7 @@
+#!/bin/bash
+
+brew cask install hipchat
+brew cask install sequel-pro
+brew cask install google-chrome
+brew cask install iterm2
+brew cask install qlstephen quicklook-json quicklook-csv qlmarkdown

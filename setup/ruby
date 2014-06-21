@@ -1,5 +1,11 @@
 #!/bin/bash
 
+brew install rbenv
+brew install ruby-build
+
+echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+source ~/.bash_profile
+
 # Custom ruby 2.1.1 version
 curl https://source.datanerd.us/gist/didip/10/raw/install-custom-ruby-build.rb | sh
 mkdir -p ~/.rbenv/versions/2.1.1-yaml-016/lib

@@ -2,4 +2,15 @@
 
 cd `mktemp -d /tmp/nr-brewery-XX`
 curl -fsSL https://github.com/binaryseed/brewery/tarball/master | tar xz -m --strip 1
-./brewery
+
+./setup/brew
+./setup/git
+./setup/ruby
+
+./setup/data-stores
+./setup/docker
+
+./setup/java
+./setup/javascript
+
+./setup/mac-apps
