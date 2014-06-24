@@ -1,12 +1,15 @@
-#### Brewery
+### Brewery
+-----
 
-New Developer Provisioning scripts
+#### New Developer Provisioning scripts
+
+To install, run this command:
 
 ```bash
-curl https://raw.githubusercontent.com/binaryseed/brewery/master/install | sh
+curl -L https://j.mp/nr_install | sh
 ```
 
-##### Tools used
+#### Tools used
 
 * Homebrew https://github.com/Homebrew/homebrew
 * Homebrew-versions https://github.com/Homebrew/homebrew-versions
