@@ -9,7 +9,4 @@ brew doctor
 brew update
 
 brew tap homebrew/versions
-# https://github.com/Homebrew/homebrew-versions
-
-brew install caskroom/cask/brew-cask
-# https://github.com/caskroom/homebrew-cask/
+brew install caskroom/cask/brew-cask  # Password needed
