@@ -1,12 +1,13 @@
 #!/bin/bash
 
 cd `mktemp -d /tmp/nr-brewery-XX`
-curl -fsSL https://github.com/binaryseed/brewery/tarball/master | tar xz -m --strip 1
+curl -fsSL https://codeload.github.com/binaryseed/brewery/legacy.tar.gz/master | tar xz -m --strip 1
 
+./setup/xcode-cli
 ./setup/brew
 ./setup/git
-./setup/ruby
 
+./setup/ruby
 ./setup/data-stores
 ./setup/docker
 

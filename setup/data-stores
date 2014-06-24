@@ -6,6 +6,7 @@ brew install elasticsearch
 brew install redis
 brew install postgresql
 
+mkdir -p ~/Library/LaunchAgents
 brew services start memcached
 brew services start mysql55
 brew services start elasticsearch
