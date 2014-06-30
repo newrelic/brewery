@@ -6,7 +6,7 @@
 To install, run this command:
 
 ```bash
-curl -L https://j.mp/nr_install | sh
+curl -L https://j.mp/nr-install | sh
 ```
 
 #### Tools used
