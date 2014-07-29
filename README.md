@@ -3,11 +3,15 @@
 
 #### New Developer Provisioning scripts
 
-To install, run this command:
+To build up a new machine from scratch, run this command:
 
 ```bash
 curl -L https://j.mp/nr-install | sh
 ```
+
+#### Current Developers
+
+You can use the scripts in `setup` to help you install the software you need. Check out the repo and run them, or just execute the commands as you see fit.
 
 #### Tools used
 

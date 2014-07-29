@@ -1,11 +1,13 @@
 #!/bin/bash
 
+# Install the various data-stores
 brew install memcached
 brew install mysql55
 brew install elasticsearch
 brew install redis
 brew install postgresql
 
+# Set them up to run automatically
 mkdir -p ~/Library/LaunchAgents
 brew services start memcached
 brew services start mysql55
@@ -13,5 +15,5 @@ brew services start elasticsearch
 brew services start redis
 brew services start postgresql
 
-# Setup postgresql db
+# Setup postgres db
 createdb $USER

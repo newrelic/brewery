@@ -1,12 +1,16 @@
 #!/bin/bash
 
+# Install homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/homebrew/go/install)"
 
+# add to your PATH
 echo 'export PATH=/usr/local/bin:$PATH' >> ~/.bash_profile
 source ~/.bash_profile
 
+# ensure it's up to date
 brew doctor
 brew update
 
+# install brew extensions
 brew tap homebrew/versions
 brew install caskroom/cask/brew-cask  # Password needed
