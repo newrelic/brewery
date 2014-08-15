@@ -3,17 +3,16 @@
 # Install the various data-stores
 brew install memcached
 brew install mysql55
-brew install elasticsearch
 brew install redis
 brew install postgresql
 
 # Set them up to run automatically
 mkdir -p ~/Library/LaunchAgents
-brew services start memcached
-brew services start mysql55
-brew services start elasticsearch
-brew services start redis
-brew services start postgresql
+ln -sfv /usr/local/opt/memcached/*.plist ~/Library/LaunchAgents
+ln -sfv /usr/local/opt/mysql55/*.plist ~/Library/LaunchAgents
+ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents
+ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+launchctl load ~/Library/LaunchAgents/homebrew*.plist
 
 # Setup postgres db
 createdb $USER
