@@ -5,9 +5,4 @@ set -e
 
 xcode-select --install
 
-# GUI interaction needed
-sleep 1
-osascript -e 'tell application "System Events" to keystroke return'
-
-sleep 1
-osascript -e 'tell application "System Events" to click button "Agree" of window "License Agreement" of process "Install Command Line Developer Tools"'
+read -p "Press [ENTER] when Xcode has been installed" user_input
