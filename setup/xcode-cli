@@ -5,4 +5,5 @@ set -e
 
 xcode-select --install
 
-read -p "Press [ENTER] when Xcode has been installed" user_input
+echo "Press [ENTER] when Xcode has been installed"
+read _ < /dev/tty

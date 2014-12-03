@@ -6,7 +6,7 @@
 To build up a new machine from scratch, run this command:
 
 ```bash
-curl -L https://j.mp/nr-install | sh
+curl -L https://j.mp/nr-install | bash
 ```
 
 #### Current Developers

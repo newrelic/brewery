@@ -15,7 +15,9 @@ ln -sfv /usr/local/opt/memcached/*.plist ~/Library/LaunchAgents
 ln -sfv /usr/local/opt/mysql55/*.plist ~/Library/LaunchAgents
 ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents
 ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+
 launchctl load ~/Library/LaunchAgents/homebrew*.plist
+sleep 5
 
 # Setup postgres db
 createdb $USER
