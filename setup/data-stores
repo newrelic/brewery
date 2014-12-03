@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Be extra verbose
+set -x
+
 # Install the various data-stores
 brew install memcached
 brew install mysql55

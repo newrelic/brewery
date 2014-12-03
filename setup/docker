@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Be extra verbose
+set -x
+
 brew install thrift
 brew install boot2docker
 

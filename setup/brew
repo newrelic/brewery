@@ -3,6 +3,8 @@
 # If any command fails, we should exit with a failure
 set -e
 
+# Be extra verbose
+set -x
 
 # Install homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
