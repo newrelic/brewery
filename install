@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# If any step of the installation fails, we should exit with a failure
+set -e
+
 cd `mktemp -d /tmp/nr-brewery-XX`
 curl -fsSL https://github.com/newrelic/brewery/tarball/master | tar xz -m --strip 1
 

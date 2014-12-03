@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# If any command fails, we should exit with a failure
+set -e
+
+
 # Install homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/homebrew/go/install)"
 

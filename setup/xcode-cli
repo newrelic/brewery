@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# If any command fails, we should exit with a failure
+set -e
+
 xcode-select --install
 
 # GUI interaction needed
