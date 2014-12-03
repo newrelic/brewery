@@ -17,5 +17,4 @@ You can use the scripts in `setup` to help you install the software you need. Ch
 
 * Homebrew https://github.com/Homebrew/homebrew
 * Homebrew-versions https://github.com/Homebrew/homebrew-versions
-* Caskroom https://github.com/caskroom/homebrew-cask/
 

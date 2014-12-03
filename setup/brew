@@ -17,4 +17,3 @@ brew update
 
 # install brew extensions
 brew tap homebrew/versions
-brew install caskroom/cask/brew-cask  # Password needed

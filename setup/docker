@@ -1,6 +1,5 @@
 #!/bin/bash
 
-brew cask install virtualbox
 brew install thrift
 brew install boot2docker
 
