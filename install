@@ -19,5 +19,3 @@ curl -fsSL https://github.com/newrelic/brewery/tarball/master | tar xz -m --stri
 
 ./setup/java
 ./setup/javascript
-
-./setup/mac-apps

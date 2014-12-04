@@ -1,9 +1,0 @@
-#!/bin/bash
-
-# Lots of mac apps are available to install easily!
-#   https://github.com/caskroom/homebrew-cask/tree/master/Casks
-
-# brew install caskroom/cask/brew-cask
-# brew cask install iterm2
-# brew cask install sequel-pro
-# brew cask install qlstephen quicklook-json quicklook-csv qlmarkdown
