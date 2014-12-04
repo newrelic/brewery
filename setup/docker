@@ -1,10 +1,10 @@
 #!/bin/bash
 
-brew install thrift
-brew install boot2docker
+# brew install thrift
+# brew install boot2docker
 
-echo 'export DOCKER_HOST="tcp://localhost:2375"' >> ~/.bash_profile
-source ~/.bash_profile
+# echo 'export DOCKER_HOST="tcp://localhost:2375"' >> ~/.bash_profile
+# source ~/.bash_profile
 
-boot2docker download
-boot2docker init --memory=$(echo $(sysctl -n hw.memsize)/1024/1024\*0.66/1 | bc)
+# boot2docker download
+# boot2docker init --memory=$(echo $(sysctl -n hw.memsize)/1024/1024\*0.66/1 | bc)
