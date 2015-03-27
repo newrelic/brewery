@@ -13,6 +13,3 @@ source ~/.bash_profile
 # ensure it's up to date
 brew doctor
 brew update
-
-# install brew extensions
-brew tap homebrew/versions

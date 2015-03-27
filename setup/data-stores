@@ -5,14 +5,14 @@ set -x
 
 # Install the various data-stores
 brew install memcached
-brew install mysql55
+brew install mysql
 brew install redis
 brew install postgresql
 
 # Set them up to run automatically
 mkdir -p ~/Library/LaunchAgents
 ln -sfv /usr/local/opt/memcached/*.plist ~/Library/LaunchAgents
-ln -sfv /usr/local/opt/mysql55/*.plist ~/Library/LaunchAgents
+ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
 ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents
 ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
 
