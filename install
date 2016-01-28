@@ -15,7 +15,7 @@ curl -fsSL https://github.com/newrelic/brewery/tarball/master | tar xz -m --stri
 
 ./setup/ruby
 ./setup/data-stores
-./setup/docker
+./setup/virtualization
 
 ./setup/java
 ./setup/javascript

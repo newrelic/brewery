@@ -1,0 +1,31 @@
+#!/bin/bash
+VM_LIMIT_PCT=0.66
+VM_NAME=dev
+
+# Install virtualization/containerization tools, iff needed
+# TODO: Consider throwing in `vagrant-manager` here, too.
+#
+# TODO: Consider throwing in VMWare and relevant plugins as well?
+#
+# TODO: Is Vagrant only relevant to Tools / Site-Engineering?
+for TOOL in virtualbox vagrant dockertoolbox; do
+  brew cask list $TOOL > /dev/null 2>&1
+  if [ $? -ne 0 ]; then
+    brew cask install $TOOL
+  fi
+done
+
+VM_MEMORY_LIMIT_MIB=$(echo $(sysctl -n hw.memsize)/1024/1024\*$VM_LIMIT_PCT/1 | bc)
+docker-machine create --driver virtualbox --virtualbox-memory $VM_MEMORY_LIMIT_MIB $VM_NAME 2>&1 |
+  grep -v "Host already exists"
+docker-machine stop $VM_NAME 2>&1 |
+  grep -v "is already stopped"
+
+echo "Use the following commands to work with your Docker server:"
+echo "  Start the VM:   docker-machine start $VM_NAME"
+echo "  Setup env:      eval \$(docker-machine env $VM_NAME)"
+echo "  Stop the VM:    docker-machine stop $VM_NAME"
+echo
+echo "When the VM is running, and your env is set up, you can use the \`docker\` command normally."
+
+# brew install thrift
