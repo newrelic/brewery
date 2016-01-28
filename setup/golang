@@ -1,0 +1,21 @@
+#!/bin/bash
+DEFAULT_GO_VERSION=1.5.3
+
+# Install manager for multiple Go versions
+brew install gimme
+
+# Set up a place for Go assets/tools to install to
+export GOPATH=~/go
+mkdir -p ~/go
+
+# Install and activate Go
+eval "$(gimme $DEFAULT_GO_VERSION)"
+
+# Set up environment to auto-activate this version of Go and have a proper env
+echo "export GOPATH=~/go" >> ~/.bash_profile
+echo "eval \"\$(gimme $DEFAULT_GO_VERSION)\"" >> ~/.bash_profile
+
+# Set up tool for managing dependencies for Go projects
+# This tool *is* available via Homebrew, but that requires installing Go through Homebrew, which
+# would create some confusion wrt `gimme`, so we just install it directly here
+go get github.com/tools/godep
