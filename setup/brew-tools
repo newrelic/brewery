@@ -6,3 +6,6 @@ for TOOL in launchrocket; do
     brew cask install $TOOL
   fi
 done
+
+# Handy tap for things like SublimeText 3, etc.
+brew tap caskroom/versions
