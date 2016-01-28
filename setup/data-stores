@@ -4,22 +4,26 @@
 set -x
 
 # Install the various data-stores
-brew install memcached
-brew install redis
-brew install postgresql
-
-brew tap homebrew/versions
-brew install mysql56
-
-# Set them up to run automatically
 mkdir -p ~/Library/LaunchAgents
-ln -sfv /usr/local/opt/memcached/*.plist ~/Library/LaunchAgents
-ln -sfv /usr/local/opt/mysql56/*.plist ~/Library/LaunchAgents
-ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents
-ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+brew tap homebrew/versions
+for DATASTORE in memcached redis postgresql mysql56; do
+  # Install the service, iff needed
+  if [ $(($(brew list --versions $DATASTORE) + 0)) -eq 0 ]; then
+    brew install $DATASTORE
+  fi
+
+  # Set service up to run automatically
+  if [ $(($(brew list --versions $DATASTORE) + 0)) -eq 1 ]; then
+    ln -sfv /usr/local/opt/$DATASTORE/*.plist ~/Library/LaunchAgents
+  else
+    echo "WARNING: Couldn't set $DATASTORE to auto-start because multiple versions are installed."
+  fi
+done
 
 launchctl load ~/Library/LaunchAgents/homebrew*.plist
 sleep 5
 
-# Setup postgres db
-createdb $USER
+# Ensure postgres db exists, ignoring any messages about it already existing in the event this
+# script needs to be re-run
+createdb $USER |
+  grep -v "database \"$USER\" already exists" 1>&2
