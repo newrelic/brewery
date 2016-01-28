@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for TOOL in launchrocket; do
+  brew cask list $TOOL > /dev/null 2>&1
+  if [ $? -ne 0 ]; then
+    brew cask install $TOOL
+  fi
+done
