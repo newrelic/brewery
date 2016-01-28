@@ -15,6 +15,7 @@ brew doctor
 brew update
 
 # Add Cask for getting native OS X stuff
+# We could use this to install Java, Chrome/Firefox/etc, BTW...
 brew tap caskroom/cask
 
 # TODO: We should use `brew cask doctor`, but:
