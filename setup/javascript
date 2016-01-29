@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # Install nvm, node and npm
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh | bash
-. ~/.nvm/nvm.sh
+brew install nvm
+
+source ~/.nvm/nvm.sh
 nvm install stable
 nvm alias default stable
 npm install -g npm@latest
