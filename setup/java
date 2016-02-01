@@ -1,4 +1,8 @@
 #!/bin/bash
 
-brew install gradle
-brew install maven
+for TOOL in gradle maven; do
+  # Install the tool, iff needed
+  if [ $(($(brew list --versions $TOOL) + 0)) -eq 0 ]; then
+    brew install $TOOL
+  fi
+done

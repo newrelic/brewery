@@ -7,3 +7,8 @@ xcode-select --install
 
 echo "Press [ENTER] when Xcode has been installed"
 read _ < /dev/tty
+
+echo "You will need to review the Xcode license, then type 'agree' at the very end, and press [ENTER]."
+echo "Press [ENTER], then enter your password, to review the Xcode license."
+read _ < /dev/tty
+sudo xcodebuild -license

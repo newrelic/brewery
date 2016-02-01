@@ -1,6 +1,7 @@
 #!/bin/bash
 
 brew install rbenv
+brew install rbenv-gemset
 brew install ruby-build
 
 echo 'eval "$(rbenv init -)"' >> ~/.bash_profile

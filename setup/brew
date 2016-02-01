@@ -13,3 +13,11 @@ source ~/.bash_profile
 # ensure it's up to date
 brew doctor
 brew update
+
+# Add Cask for getting native OS X stuff
+# We could use this to install Java, Chrome/Firefox/etc, BTW...
+brew tap caskroom/cask
+
+# TODO: We should use `brew cask doctor`, but:
+# TODO: 1. It's very noisy even when everything is OK.
+# TODO: 2. I'm not certain it returns a non-zero exit code when things are _not_ OK.

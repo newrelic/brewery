@@ -11,11 +11,15 @@ curl -fsSL https://github.com/newrelic/brewery/tarball/master | tar xz -m --stri
 
 ./setup/xcode-cli
 ./setup/brew
+./setup/brew-tools
 ./setup/git
 
 ./setup/ruby
 ./setup/data-stores
-./setup/docker
+./setup/virtualization
+./setup/virtualization-tools
 
 ./setup/java
 ./setup/javascript
+
+./setup/golang
