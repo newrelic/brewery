@@ -1,3 +1,10 @@
 #!/bin/bash
 
 brew install git
+
+# Fix to make git-lfs work with GHE.
+git config --global lfs.batch false
+
+# Fix to make `go get` work with GHE.  Needed because 2FA interferes with use of HTTPS protocol, and
+# golang doesn't know to try the SSH protocol.
+git config --global url."git@source.datanerd.us:".insteadof https://source.datanerd.us/
